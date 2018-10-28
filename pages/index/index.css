@@ -1,0 +1,130 @@
+body {
+    background: #2d3143;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    width: 1200px;
+    min-height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -35%);
+    opacity: 0;
+    transition: .5s ease-in-out;
+    padding: 20px;
+}
+
+#app > #top {
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+}
+
+#top > h1 {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-indent: 15px;
+    margin-bottom: 20px;
+}
+
+#top > .line {
+    background: blueviolet;
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+    position: relative;
+}
+
+#top > .line::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 5px solid blueviolet;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+    top: -15px;
+    background: #2d3143;
+    background-clip: content-box;
+    left: 100px;
+    border-radius: 5px;
+}
+
+#middle {
+    width: 80%;
+    min-height: 420px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#middle > .work {
+    width: 30%;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.work .content {
+    width: 100%;
+    height: 80%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(to left, blueviolet, darkorchid);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > h2 {
+    font-weight: bold;
+    color: white;
+
+}
+.content > h2 > strong{
+    color: khaki;
+}
+.work .description {
+    width: 100%;
+    height: 20%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #474A59;
+    padding: 5px;
+}
+
+.description > p {
+    color: rgba(255, 255, 255, .5);
+    font-size: 16px;
+    text-indent: 10px;
+}
+
+#middle > .work:hover {
+    animation: .5s loop infinite alternate;
+}
+
+@keyframes loop {
+    from {
+        transform: translateY(8px);
+
+    }
+    to {
+        transform: translateY(-8px);
+
+    }
+
+}

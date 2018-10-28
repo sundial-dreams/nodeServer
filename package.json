@@ -1,0 +1,9 @@
+{
+  "name": "StaticServer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "koa": "^2.6.1"
+  }
+}
